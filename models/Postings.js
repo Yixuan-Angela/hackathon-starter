@@ -3,15 +3,15 @@ const crypto = require('crypto');
 const mongoose = require('mongoose');
 
 const postingsSchema = new mongoose.Schema({
-  "referenceID": { type: String, unique: true },
-  "title":String,
-  "userEmail": String,
+  //"referenceID": { type: String, unique: true },
+  "title": String,
+  "email": String,
   "price": Number,
-  "maxPeople": Number,
+  "numPeople": Number,
   "postingDate": Date,
 
   "adress": {
-    "streetAddress": String,
+    "address": String,
     "city": String,
     "zip": Number,
     "picture": String
