@@ -30,10 +30,10 @@ exports.addPostings = (req, res, next) => {
 
 	});
 
-	posting.save((err) => {
-     if (err) { return next(err); }
-      res.redirect('/');
-    });
+	//posting.save((err) => {
+    // if (err) { return next(err); }
+    //  res.redirect('/');
+    //});
 
 
 	res.render('newpost',
