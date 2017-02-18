@@ -1,6 +1,7 @@
 extends layout
 
 block content
+<<<<<<< HEAD
   h1 Hackathon Starter
   p.lead A boilerplate for Node.js web applications.
   hr
@@ -25,3 +26,30 @@ block content
       p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
       p
         a.btn.btn-default(href='#', role='button') View details »
+=======
+  .page-header
+    h3 Search for Roomate
+
+  form.form-horizontal(method='POST')
+    input(type='hidden', name='_csrf', value=_csrf)
+    .form-group
+      label(class='col-sm-2 control-label', for='city') City
+      .col-sm-8
+        input.form-control(type='text', name='city', id='city', autofocus=true)
+    .form-group
+      label(class='col-sm-2 control-label', for='zip') Zip Code
+      .col-sm-8
+        input.form-control(type='text', name='zip', id='zip')
+    .form-group
+      label(class='col-sm-2 control-label', for='price') Price Cap
+      .col-sm-8
+        input.form-control(type='text', name='price', id='price')
+    .form-group
+      label(class='col-sm-2 control-label', for='people') Person Cap
+      .col-sm-8
+        input.form-control(type='text', name='people', id='people')
+    .form-group
+      .col-sm-offset-2.col-sm-8
+        button.btn.btn-primary(type='submit')
+          | Search
+>>>>>>> 36b424cedeac8db3cec8930eb1cf07720f485c8e
