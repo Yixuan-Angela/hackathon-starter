@@ -13,10 +13,10 @@
       ul.nav.navbar-nav
         li(class=(title == 'Home') ? 'active' : undefined)
           a(href='/') Search
-        li(class=(title == 'API Examples') ? 'active' : undefined)
-          a(href='/') Post Listings
-        li(class=(title == 'MatchMe') ? 'active' : undefined)
-          a(href='/') MatchMe
+        li(class=(title == 'Listings') ? 'active' : undefined)
+          a(href='/postings') Listings
+        li(class=(title == 'Post') ? 'active' : undefined)
+          a(href='/newpost') New Post
       ul.nav.navbar-nav.navbar-right
         if !user
           li(class=(title == 'Login') ? 'active' : undefined)
