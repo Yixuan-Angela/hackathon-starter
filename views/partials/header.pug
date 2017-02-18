@@ -12,11 +12,11 @@
     .collapse.navbar-collapse
       ul.nav.navbar-nav
         li(class=(title == 'Home') ? 'active' : undefined)
-          a(href='/') Home
+          a(href='/') Search
         li(class=(title == 'API Examples') ? 'active' : undefined)
-          a(href='/api') API Examples
+          a(href='/') Post Listings
         li(class=(title == 'MatchMe') ? 'active' : undefined)
-          a(href='/MatchMe') MatchMe
+          a(href='/') MatchMe
       ul.nav.navbar-nav.navbar-right
         if !user
           li(class=(title == 'Login') ? 'active' : undefined)
