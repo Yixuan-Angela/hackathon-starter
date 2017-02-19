@@ -4,6 +4,27 @@ block content
   .page-header
     h3 Listings
 
-  ul
+    style.
+        table{
+            border-collapse: collapse;
+        }
+        table, tr, td
+        {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+  table
+    tr
+        td Title
+        td Address
+        td Number of People
+        td Price
+        td Posting Date
     for posting in postings
-      li= posting.referenceID
+        tr
+            td= posting.title
+            td= posting.adress.address + "   " + posting.adress.city + " " + posting.adress.zip 
+            td= posting.numPeople
+            td= posting.price
+            td= posting.postingDate

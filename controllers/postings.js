@@ -7,9 +7,43 @@ const mongoose = require('mongoose');
 
 
 exports.getPostings = (req, res) => {
-  Postings.find((err, docs) => {
-    res.render('postings', { postings: docs });
-  });
+
+
+	//console.log(req);
+
+	var AllPosts = [];
+	var numPosts = 0;
+
+
+	Postings.find({}, function(err, postingList) {
+		console.log("In Find");
+		
+		
+		if (postingList.length > 0)
+		{
+			postingList.forEach(function(currentEntry)
+			{
+
+				console.log(currentEntry);
+				AllPosts[numPosts] = currentEntry;
+				numPosts = numPosts + 1;
+
+
+			});
+
+		}
+
+		console.log("numPost contains elements: ");
+		console.log(AllPosts);
+
+		res.render('postings', {postings:AllPosts});
+
+		console.log("end find");
+		
+	});
+
+	
+
 };
 
 
