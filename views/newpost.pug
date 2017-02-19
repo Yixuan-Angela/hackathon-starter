@@ -4,8 +4,8 @@ block content
   .page-header
     h3 create new post
 
-  form.form-horizontal(method='POST')
-    input(type='hidden', name='_csrf', value=_csrf)
+  form.form-horizontal(method='POST', enctype='multipart/form-data')
+    input(type='hidden', id='csrf', name='_csrf', value="{ csrf_token() }")
     .form-group
       label(class='col-sm-2 control-label', for='title') Post Title
       .col-sm-8
@@ -35,6 +35,14 @@ block content
       .col-sm-8
         input.form-control(type='text', name='zip', id='zip')
     .form-group
+      abel(class='col-sm-2 control-label', for='file') Image Upload
+      .col-sm-8
+        input.form-control(type='file', name='file', id='file')
+    .form-group
       .col-sm-offset-2.col-sm-8
         button.btn.btn-primary(type='submit')
           | Post
+
+  script.
+    //document.getElementById('zip').value = document.querySelector('meta[name="csrf-token"]').getAttribute("content");
+    //alert(document.getElementById('csrf').value);

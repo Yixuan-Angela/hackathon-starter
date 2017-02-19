@@ -20,7 +20,10 @@ const expressStatusMonitor = require('express-status-monitor');
 const sass = require('node-sass-middleware');
 const multer = require('multer');
 
-const upload = multer({ dest: path.join(__dirname, 'uploads') });
+const upload = multer({ dest: path.join(__dirname, 'temp') });
+
+var fs = require("fs");
+
 
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
@@ -84,11 +87,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 app.use((req, res, next) => {
-  if (req.path === '/api/upload') {
+  // if (req.path === '/api/upload') {
     next();
-  } else {
-    lusca.csrf()(req, res, next);
-  }
+  // } else {
+  //   lusca.csrf()(req, res, next);
+  // }
 });
 app.use(lusca.xframe('SAMEORIGIN'));
 app.use(lusca.xssProtection(true));
@@ -136,7 +139,111 @@ app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userControl
 
 app.get('/postings', postController.getPostings);
 app.get('/newpost', postController.addPostings);
-app.post('/newpost',postController.addPostings);
+//app.post('/newpost',postController.addPostings);
+
+
+// File input field name is simply 'file'
+app.post('/newpost', upload.single('file'), function(req, res) {
+
+
+ console.log("newpost file");
+ console.log("file path ------");
+ console.log(req.file.path);
+ console.log("file path ------");
+
+  var file = __dirname + '/uploads/' + req.file.filename + ".jpg";
+
+  console.log(__dirname);
+  console.log(file);
+
+  console.log("-----------");
+
+  var successUpload  = false;
+
+  fs.rename(req.file.path, file, function(err) {
+    if (err) {
+      console.log(err);
+      res.send(500);
+    } else {
+      console.log("trying to upload");
+
+      successUpload = true;
+      
+      console.log("uploaded");
+    }
+  });
+
+  console.log("uploaded file");
+
+  const Postings = require('./models/Postings');
+
+  var PostingSchema = mongoose.model('Postings', PostingSchema)
+
+  console.log(req.body);
+  console.log(req.body.title);
+  console.log("---------------------------------------------");
+  console.log(req.file);
+  console.log("---------------------------------------------");
+  var Thetitle = req.body.title;
+  if (Thetitle)
+  {
+    console.log("defined title");
+  }
+
+  var newposting = new Postings({
+
+    //generate id
+
+    "title" :req.body.title,
+      "email": req.body.email,
+      "price": req.body.price,
+      "numPeople": req.body.numPeople,
+      "postingDate": Date(),
+
+    "adress":
+    {
+      "address": req.body.address,
+        "city": req.body.city,
+        "zip": req.body.zip,
+        "picture": file
+    }
+  });
+  
+
+  // if there is a title then save
+  if (req.body.title || req.body.email || req.body.numPeople || req.body.price || req.body.address || req.body.city || req.body.zip)
+  {
+    console.log("saving to db");
+
+    newposting.save(function(err){
+      if (err)
+      {
+        console.log(err);
+        //res.redirect('/');
+      }
+      else
+      {
+        //res.redirect('/postings');
+      }
+      });
+  }
+
+  if (successUpload == true)
+  {
+    res.json({
+        message: 'File uploaded successfully',
+        filename: req.file.filename
+      });
+  }
+  res.render('newpost',
+  {
+    title:"New Post"
+
+  });
+
+});
+
+
 
 app.get('/post/:id', function(req,res){
 
@@ -244,6 +351,7 @@ app.get('/auth/pinterest', passport.authorize('pinterest', { scope: 'read_public
 app.get('/auth/pinterest/callback', passport.authorize('pinterest', { failureRedirect: '/login' }), (req, res) => {
   res.redirect('/api/pinterest');
 });
+
 
 /**
  * Error Handler.
