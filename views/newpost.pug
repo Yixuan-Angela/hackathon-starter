@@ -3,48 +3,56 @@ extends layout
 block content
   .page-header
     h3 Create new post
+    style.
+           body{
+                   background: url("https://static.pexels.com/photos/35170/pexels-photo.jpg") no-repeat center center fixed;
+                   background-size: cover;
+           }
+           input.cornersBox{
 
-  style.
-       body{
-               background: url("https://static.pexels.com/photos/35170/pexels-photo.jpg") no-repeat center center fixed;
-               background-size: cover;
 
-       }
+                           border-radius: 20px;
+
+
+
+           }
+
+
 
   form.form-horizontal(method='POST', enctype='multipart/form-data')
     input(type='hidden', id='csrf', name='_csrf', value="{ csrf_token() }")
     .form-group
       label(class='col-sm-2 control-label', for='title') Post Title
       .col-sm-8
-        input.form-control(type='text', name='title', id='title')
+        input.form-control.cornersBox(type='text', name='title', id='title')
     .form-group
       label(class='col-sm-2 control-label', for='email') E-Mail
       .col-sm-8
-        input.form-control(type='text', name='email', id='email')
+        input.form-control.cornersBox(type='text', name='email', id='email')
     .form-group
       label(class='col-sm-2 control-label', for='numPeople') Number of Tenants
       .col-sm-8
-        input.form-control(type='text', name='numPeople', id='numPeople')
+        input.form-control.cornersBox(type='text', name='numPeople', id='numPeople')
     .form-group
       label(class='col-sm-2 control-label', for='price') Price
       .col-sm-8
-        input.form-control(type='text', name='price', id='price')
+        input.form-control.cornersBox(type='text', name='price', id='price')
     .form-group
       label(class='col-sm-2 control-label', for='address') Street Address
       .col-sm-8
-        input.form-control(type='text', name='address', id='address')
+        input.form-control.cornersBox(type='text', name='address', id='address')
     .form-group
       label(class='col-sm-2 control-label', for='city') City
       .col-sm-8
-        input.form-control(type='text', name='city', id='city', autofocus=true)
+        input.form-control.cornersBox(type='text', name='city', id='city', autofocus=true)
     .form-group
       label(class='col-sm-2 control-label', for='zip') Zip Code
       .col-sm-8
-        input.form-control(type='text', name='zip', id='zip')
+        input.form-control.cornersBox(type='text', name='zip', id='zip')
     .form-group
       abel(class='col-sm-2 control-label', for='file') Image Upload
       .col-sm-8
-        input.form-control(type='file', name='file', id='file')
+        input.form-control.cornersBox(type='file', name='file', id='file')
     .form-group
       .col-sm-offset-2.col-sm-8
         button.btn.btn-primary(type='submit')
