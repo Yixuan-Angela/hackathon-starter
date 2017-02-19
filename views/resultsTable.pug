@@ -1,0 +1,59 @@
+extends layout
+
+block content
+  .page-header
+    h3 Search for Roommate
+
+
+  style.
+       body{
+               background: url("http://i.imgur.com/Rl6gTDP.jpg") no-repeat center center fixed;
+               background-size: cover;
+
+           }
+           
+        table{
+            border-collapse: collapse;
+        }
+        table, tr, td
+        {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+  form.form-horizontal(method='POST')
+    input(type='hidden', name='_csrf', value=_csrf)
+    .form-group
+      label(class='col-sm-2 control-label', for='city') City
+      .col-sm-8
+        input.form-control(type='text', name='city', id='city', autofocus=true)
+    .form-group
+      label(class='col-sm-2 control-label', for='zip') Zip Code
+      .col-sm-8
+        input.form-control(type='text', name='zip', id='zip')
+    .form-group
+      label(class='col-sm-2 control-label', for='price') Price Cap
+      .col-sm-8
+        input.form-control(type='text', name='price', id='price')
+    .form-group
+      label(class='col-sm-2 control-label', for='people') Person Cap
+      .col-sm-8
+        input.form-control(type='text', name='people', id='people')
+    .form-group
+      .col-sm-offset-2.col-sm-8
+        button.btn.btn-primary(type='submit')
+          | Search
+    table
+        tr
+            td Title
+            td Address
+            td Number of People
+            td Price
+            td Posting Date
+        for posting in postings
+            tr
+                td= posting.title
+                td= posting.adress.address + "   " + posting.adress.city + " " + posting.adress.zip 
+                td= posting.numPeople
+                td= posting.price
+                td= posting.postingDate
