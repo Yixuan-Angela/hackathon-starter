@@ -138,6 +138,32 @@ app.get('/postings', postController.getPostings);
 app.get('/newpost', postController.addPostings);
 app.post('/newpost',postController.addPostings);
 
+app.get('/post/:id', function(req,res){
+
+    const Postings = require('./models/Postings');
+
+    Postings.find({"_id":req.params.id}, function(err,postingID)
+    {
+
+      if (err)
+      {
+        console.log(err);
+      }
+      else
+      {
+        res.render('post',
+          {
+
+            title: postingID[0].title
+
+          });
+      }
+
+    });
+
+
+  });
+
 /**
  * API examples routes.
  */

@@ -16,39 +16,28 @@ exports.index = (req, res) => {
 
 exports.displayResults = (req, res) => {
 
+	req.assert('city', 'City cannot be blank').notEmpty();
+  	//req.assert('zip', 'Zip is not valid').notEmpty();
 
+  	const errors = req.validationErrors();
+
+  	if (errors) {
+	    req.flash('errors', errors);
+    	return res.redirect('/');
+  	}
 
 	var AllPosts = [];
 	var numPosts = 0;
 
 	if (req.body)
 	{
+		if (req.body.price == '')
+		{
+			req.body.price = Number.MAX_SAFE_INTEGER;
+			console.log(req.body.price);
+		}
+
 		//means a search has occured -> load results below search form
-
-		/*
-
-		.form-group
-      label(class='col-sm-2 control-label', for='city') City
-      .col-sm-8
-        input.form-control(type='text', name='city', id='city', autofocus=true)
-    .form-group
-      label(class='col-sm-2 control-label', for='zip') Zip Code
-      .col-sm-8
-        input.form-control(type='text', name='zip', id='zip')
-    .form-group
-      label(class='col-sm-2 control-label', for='price') Price Cap
-      .col-sm-8
-        input.form-control(type='text', name='price', id='price')
-    .form-group
-      label(class='col-sm-2 control-label', for='people') Person Cap
-      .col-sm-8
-        input.form-control(type='text', name='people', id='people')
-    .form-group
-      .col-sm-offset-2.col-sm-8
-        button.btn.btn-primary(type='submit')
-          | Search
-
-     */
 
 	    console.log(req.body.price);
 
@@ -64,11 +53,16 @@ exports.displayResults = (req, res) => {
 
 					//console.log(currentEntry);
 
-					if (currentEntry.price < req.body.price)
+					if (currentEntry.price < (req.body.price)*1.10)
 					{
+
 						console.log(currentEntry);
+
+
+						
 						AllPosts[numPosts] = currentEntry;
-						numPosts = numPosts + 1;
+						numPosts = numPosts + 1;	
+
 
 					}
 
@@ -79,6 +73,14 @@ exports.displayResults = (req, res) => {
 
 			if (AllPosts)
 			{
+
+				AllPosts.sort(function(a,b){
+
+					return a.price - b.price;
+
+
+				});
+
 				console.log("resultsTable loading)");
 				res.render('resultsTable', {
 			    	title: 'Home',
