@@ -5,26 +5,71 @@ block content
     h3 Listings
 
     style.
-        table{
-            border-collapse: collapse;
+       body{
+               background: url("http://holographer.org/theme/holographer.org/assets/img/slideshow/slide2.jpg") no-repeat center center fixed;
+               background-size: cover;
+
+       }
+
+
+    style.
+        table, th, td {
+        border-collapse: collapse;
+        border-bottom-color: rgb(211, 202, 221);
+        border-top-color: rgb(211, 202, 221);
         }
-        table, tr, td
-        {
-            border: 1px solid black;
-            padding: 10px;
+        table {
+            margin: auto;
+            border-spacing: 0;
+        }
+        th, td {
+        padding: 5px 10px;
+
+        font-size: 12px;
+        font-family: Verdana;
+        color: rgb(95, 74, 121);
+        border-top-width: 1px;
+        border-top-style: solid;
+        }
+        tr:nth-child(even) {
+        background: rgb(223, 216, 232)
+        }
+        tr:nth-child(odd) {
+        background: #FFF
+        }
+        .container{
+        width:1000px;
+        margin:0 auto;
         }
 
-  table
-    tr
-        td Title
-        td Address
-        td Number of People
-        td Price
-        td Posting Date
-    for posting in postings
+        .tab{
+        margin:0 auto;
+        max-width: 100%;
+        height: 200px;
+        }
+  .container
+
+
+    .tab
+
+      table
+
         tr
-            td= posting.title
-            td= posting.adress.address + "   " + posting.adress.city + " " + posting.adress.zip 
-            td= posting.numPeople
-            td= posting.price
-            td= posting.postingDate
+
+            th Photo
+            th Title
+            th Address
+            th Number of People
+            th Price
+            th Posting Date
+        for posting in postings
+            tr
+                td
+                    img(src="https://t1.uc.ltmcdn.com/fr/images/2/2/4/img_comment_choisir_des_rideaux_pour_une_chambre_a_coucher_12422_600.jpg", alt="photo", style='width:120px;height:100px;')
+                td= posting.title
+                td= posting.adress.address + "   " + posting.adress.city + " " + posting.adress.zip
+                td= posting.numPeople
+                td= posting.price
+                td= posting.postingDate
+
+
