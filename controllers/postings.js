@@ -37,7 +37,12 @@ exports.getPostings = (req, res) => {
 		console.log("numPost contains elements: ");
 		console.log(AllPosts);
 
-		res.render('postings', {postings:AllPosts});
+		res.render('postings', {
+
+			title: 'Postings',
+			postings:AllPosts
+
+		});
 
 		console.log("end find");
 		

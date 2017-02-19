@@ -272,9 +272,12 @@ app.get('/post/:id', function(req,res){
         picURL = "/" + foundPosting[0].adress.picture;
         console.log("Picture = " + picURL);
 
+        var displayedTitle = "Entry - " + foundPosting[0].title;
+
         res.render('post',
           {
 
+            title: displayedTitle,
             postSent: foundPosting[0],
             image: picURL
 
