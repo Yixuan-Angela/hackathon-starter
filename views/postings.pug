@@ -42,7 +42,6 @@ block content
         margin:0 auto;
         }
 
-<<<<<<< HEAD
         .tab{
         margin:0 auto;
         max-width: 100%;
@@ -60,9 +59,10 @@ block content
             th Photo
             th Title
             th Address
-            th Number of People
+            th Number of Tenants
             th Price
             th Posting Date
+            th Link to Posting
         for posting in postings
             tr
                 td
@@ -72,24 +72,5 @@ block content
                 td= posting.numPeople
                 td= posting.price
                 td= posting.postingDate
-
-
-=======
-  table
-    tr
-        td Title
-        td Address
-        td Number of Tenants
-        td Price
-        td Posting Date
-        td Link to Posting
-    for posting in postings
-        tr
-            td= posting.title
-            td= posting.adress.address + "   " + posting.adress.city + " " + posting.adress.zip 
-            td= posting.numPeople
-            td= posting.price
-            td= posting.postingDate
-            td
-                a(href='/post/' + posting._id) DETAILS
->>>>>>> bb278b835026f1cb6ef57d2fb81c7f40616c8f12
+                td
+                    a(href='/post/' + posting._id) DETAILS

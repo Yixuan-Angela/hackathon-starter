@@ -1,0 +1,286 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"backg",
+				"background-image"
+			],
+			[
+				"backgroo",
+				"background-color"
+			],
+			[
+				"heigh",
+				"height"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"li",
+				"li	Tag"
+			],
+			[
+				"h",
+				"h5	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 87.0,
+		"last_filter": "match",
+		"selected_items":
+		[
+			[
+				"match",
+				"Emmet: Go to Matching Pair"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Install Package",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: E",
+				"Package Control: Enable Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"lorem",
+			"match",
+			"sublime.log_commands(True)",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp =   sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/limurui/Desktop/nyuhack-copy/1/index.lock",
+		"/Users/limurui/Documents/hackathon-bootstrap/html5up-escape-velocity/index.html",
+		"/Users/limurui/Desktop/contact.js",
+		"/Users/limurui/Desktop/nyuhack/hackathon-starter-master/views/partials/header.pug",
+		"/Users/limurui/Desktop/nyuhack/hackathon-starter-master/views/home.pug",
+		"/Users/limurui/Documents/hackathon-starter/controllers/api.js",
+		"/Users/limurui/Documents/学习/慕课网前端/imooc_html5_Chap2/meter.html",
+		"/Users/limurui/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/limurui/Library/Application Support/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+		"/Users/limurui/Library/Application Support/Sublime Text 3/Packages/Emmet/Default (OSX).sublime-keymap",
+		"/Users/limurui/Documents/学习/nyu 2017 Spring/lesson1_doctype.html",
+		"/Users/limurui/Documents/学习/nyu 2016fall/AHD/adh-final/final-12-13/AHD_FINAL_NYU_6463_processor/yl3768_Li_Yixuan/processor&I_O/datapath.vhd",
+		"/Users/limurui/Documents/学习/nyu 2016fall/AHD/Final project/RC5_Encryption_Assembly",
+		"/Volumes/C/Users/limurui/AHD quiz/Example_leftrotate/NEXY4.ucf",
+		"/Volumes/C/Users/limurui/Simple_Function/Nexys4DDR_Master.ucf",
+		"/Volumes/C/Users/limurui/AHD quiz/segmentDispaly/leftrotate.ucf",
+		"/Users/limurui/Documents/学习/nyu 2016fall/AHD/Nexys4DDR_Master.ucf",
+		"/Users/limurui/Desktop/untitled.html",
+		"/Users/limurui/Documents/Index/xiaoce.html",
+		"/Users/limurui/Documents/Index/1column_layout_natrual_flow.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/大梅资料/Taobao-tongzhuang/style.css",
+		"/Users/limurui/Documents/学习/网易微专业－前端/大梅资料/Taobao-tongzhuang/index.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/css布局/float.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/大梅资料/index.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/css布局/o4_mix.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/css布局/test.html",
+		"/Users/limurui/Documents/tao_bao.html",
+		"/Users/limurui/Documents/Index/taobao.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/css布局/absolute.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/css布局/relative.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/css布局/03.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/css布局/1column_layout_natrual_flow.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/css布局/02.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/JS入门/js.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/JS入门/弹框联系.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/JS入门/prompt.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/JS入门/DOM入门.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/css布局/prompt.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/css布局/JS1_1.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/css布局/function.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/css布局/confirm.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/css布局/绝对定位两列布局.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/css布局/mix_layout.html",
+		"/Users/limurui/Documents/绝对定位两列布局.html",
+		"/Users/limurui/Documents/absolute.html",
+		"/Users/limurui/Documents/relative.html",
+		"/Users/limurui/Documents/o4_mix.html",
+		"/Users/limurui/Documents/02.html",
+		"/Users/limurui/Documents/2column_layout.html",
+		"/Users/limurui/Documents/float.html",
+		"/Users/limurui/Documents/03.html",
+		"/Users/limurui/Documents/01.html",
+		"/Users/limurui/Documents/natrual_flow.html",
+		"/Users/limurui/Documents/HW1_3.html",
+		"/Users/limurui/Documents/学习/网易微专业－前端/html/HW1_1.html",
+		"/Users/limurui/Documents/HW2_1.html",
+		"/Users/limurui/Documents/HW2_3.html",
+		"/Users/limurui/Documents/HW2_2.html",
+		"/Users/limurui/Downloads/form_info/form_info.html",
+		"/Users/limurui/Documents/HW1_2.html",
+		"/Users/limurui/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/limurui/Documents/HW1.html"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"preference",
+			"!",
+			"utilization "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"!"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "app.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 98.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

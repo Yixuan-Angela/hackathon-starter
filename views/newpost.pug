@@ -4,7 +4,6 @@ block content
   .page-header
     h3 create new post
 
-<<<<<<< HEAD
   style.
        body{
                background: url("https://static.pexels.com/photos/35170/pexels-photo.jpg") no-repeat center center fixed;
@@ -12,12 +11,8 @@ block content
 
        }
 
-  form.form-horizontal(method='POST')
-    input(type='hidden', name='_csrf', value=_csrf)
-=======
   form.form-horizontal(method='POST', enctype='multipart/form-data')
     input(type='hidden', id='csrf', name='_csrf', value="{ csrf_token() }")
->>>>>>> bb278b835026f1cb6ef57d2fb81c7f40616c8f12
     .form-group
       label(class='col-sm-2 control-label', for='title') Post Title
       .col-sm-8
