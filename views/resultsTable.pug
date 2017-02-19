@@ -6,6 +6,41 @@ block content
 
 
   style.
+          table, th, td {
+          border-collapse: collapse;
+          border-bottom-color: rgb(211, 202, 221);
+          border-top-color: rgb(211, 202, 221);
+          }
+          table {
+              margin: auto;
+              border-spacing: 0;
+          }
+          th, td {
+          padding: 5px 10px;
+
+          font-size: 12px;
+          font-family: Verdana;
+          color: rgb(95, 74, 121);
+          border-top-width: 1px;
+          border-top-style: solid;
+          }
+          tr:nth-child(even) {
+          background: rgb(223, 216, 232)
+          }
+          tr:nth-child(odd) {
+          background: #FFF
+          }
+          .container{
+          width:1000px;
+          margin:0 auto;
+          }
+
+          .tab{
+          margin:0 auto;
+          max-width: 100%;
+
+          }
+  style.
        body{
                background: url("http://i.imgur.com/Rl6gTDP.jpg") no-repeat center center fixed;
                background-size: cover;
@@ -18,7 +53,7 @@ block content
         }
         table, tr, td
         {
-            border: 1px solid black;
+            border: 1px;
             padding: 10px;
         }
 
@@ -44,15 +79,17 @@ block content
       .col-sm-offset-2.col-sm-8
         button.btn.btn-primary(type='submit')
           | Search
+
+  .tab
     table
         tr
-            td Title
-            td Address
-            td Number of Tenants
-            td Price
-            td Posting Date
-            td Contact
-            td Link to Posting
+            th Title
+            th Address
+            th Number of Tenants
+            th Price
+            th Posting Date
+            th Contact
+            th Link to Posting
         for posting in postings
             tr
                 td= posting.title
