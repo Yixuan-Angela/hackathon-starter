@@ -66,7 +66,7 @@ block content
         for posting in postings
             tr
                 td
-                    img(src="https://t1.uc.ltmcdn.com/fr/images/2/2/4/img_comment_choisir_des_rideaux_pour_une_chambre_a_coucher_12422_600.jpg", alt="photo", style='width:120px;height:100px;')
+                    img(src='' + posting.adress.picture + '', alt="photo", style="width:120px;height:100px;")
                 td= posting.title
                 td= posting.adress.address + "   " + posting.adress.city + " " + posting.adress.zip
                 td= posting.numPeople

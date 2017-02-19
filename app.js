@@ -153,6 +153,9 @@ app.post('/newpost', upload.single('file'), function(req, res) {
 
   var file = __dirname + '/uploads/' + req.file.filename + ".jpg";
 
+  var pictureFile ='uploads/' + req.file.filename + ".jpg";
+
+
   console.log(__dirname);
   console.log(file);
 
@@ -205,7 +208,7 @@ app.post('/newpost', upload.single('file'), function(req, res) {
       "address": req.body.address,
         "city": req.body.city,
         "zip": req.body.zip,
-        "picture": file
+        "picture": pictureFile
     }
   });
   
@@ -243,6 +246,13 @@ app.post('/newpost', upload.single('file'), function(req, res) {
 
 });
 
+
+app.get('/uploads/:pictureFile',function(req,res){
+
+  console.log(req);
+  res.sendFile(path.resolve('.'+req.url));
+
+});
 
 
 app.get('/post/:id', function(req,res){
