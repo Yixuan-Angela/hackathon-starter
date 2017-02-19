@@ -62,14 +62,11 @@ block content
             th Number of Tenants
             th Price
             th Posting Date
-            th Link to Posting
             tr
                 td
-                    img(src='' + postSent.adress.picture + '', alt="photo", style="width:120px;height:100px;")
+                    img(src='' + image + '', alt="photo", style="width:120px;height:100px;")
                 td= postSent.title
                 td= postSent.adress.address + "   " + postSent.adress.city + " " + postSent.adress.zip
                 td= postSent.numPeople
                 td= postSent.price
                 td= postSent.postingDate
-                td
-                    a(href='/post/' + postSent._id) DETAILS

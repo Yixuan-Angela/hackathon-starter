@@ -268,10 +268,15 @@ app.get('/post/:id', function(req,res){
       }
       else
       {
+
+        picURL = "/" + foundPosting[0].adress.picture;
+        console.log("Picture = " + picURL);
+
         res.render('post',
           {
 
-            postSent: foundPosting[0]
+            postSent: foundPosting[0],
+            image: picURL
 
           });
       }
