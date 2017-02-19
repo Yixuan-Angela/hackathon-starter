@@ -6,10 +6,11 @@ const Postings = require('../models/Postings');
 const mongoose = require('mongoose');
 
 
+
 exports.getPostings = (req, res) => {
 
 
-	//console.log(req);
+	console.log(req);
 
 	var AllPosts = [];
 	var numPosts = 0;
