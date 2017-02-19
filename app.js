@@ -142,7 +142,7 @@ app.get('/post/:id', function(req,res){
 
     const Postings = require('./models/Postings');
 
-    Postings.find({"_id":req.params.id}, function(err,postingID)
+    Postings.find({"_id":req.params.id}, function(err,foundPosting)
     {
 
       if (err)
@@ -154,7 +154,7 @@ app.get('/post/:id', function(req,res){
         res.render('post',
           {
 
-            title: postingID[0].title
+            postSent: foundPosting[0]
 
           });
       }

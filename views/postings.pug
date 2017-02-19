@@ -21,6 +21,7 @@ block content
         td Number of Tenants
         td Price
         td Posting Date
+        td Link to Posting
     for posting in postings
         tr
             td= posting.title
@@ -28,3 +29,5 @@ block content
             td= posting.numPeople
             td= posting.price
             td= posting.postingDate
+            td
+                a(href='/post/' + posting._id) DETAILS

@@ -52,6 +52,7 @@ block content
             td Price
             td Posting Date
             td Contact
+            td Link to Posting
         for posting in postings
             tr
                 td= posting.title
@@ -60,3 +61,5 @@ block content
                 td= posting.price
                 td= posting.postingDate
                 td= posting.email
+                td
+                    a(href='/post/' + posting._id) DETAILS
